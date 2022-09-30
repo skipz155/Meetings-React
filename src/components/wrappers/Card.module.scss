@@ -1,0 +1,12 @@
+.card {
+	background-color: white;
+	border-radius: 5%;
+	margin-top: 1em;
+	max-width: 28em;
+	display: flex;
+	padding: 1em 0.5em;
+
+	&:hover {
+		box-shadow: 2px 3px 25px rgba(76, 102, 134, 0.329);
+	}
+}

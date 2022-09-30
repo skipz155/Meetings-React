@@ -1,0 +1,58 @@
+.item {
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.image {
+	object-fit: fill;
+	width: 23.5em;
+	height: 15em;
+	border-radius: 25px;
+	padding: 0;
+	margin: 0.6em;
+}
+
+.title {
+	text-align: start;
+	align-self: flex-start;
+	margin-left: 0.8em;
+	margin-top: 0.1em;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.description {
+	margin: 0.2em 1em 1.4em;
+	font-weight: lighter;
+	color: rgb(128, 128, 128);
+}
+
+@mixin button-style {
+	padding: 1.4em 2.7em;
+	border-radius: 5px;
+	background-color: rgb(73, 182, 255);
+	border-width: 0;
+	color: white;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin: 0.2em 0.4em;
+	&:hover {
+		transform: translate(0, -2px);
+		box-shadow: 1px 3px 5px rgba(54, 52, 52, 0.541);
+	}
+}
+
+.button {
+	@include button-style;
+}
+
+.delButton {
+	@include button-style;
+	background-color: red;
+}
