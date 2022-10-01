@@ -5,10 +5,11 @@ import AllMeetupsPage from "./pages/AllMeetups";
 import FavouritesPage from "./pages/Favourites";
 import NewMeetupPage from "./pages/NewMeetup";
 import MainNavigation from "./components/layout/MainNavigation";
+import './index.scss';
 
 function App() {
 	return (
-		<div>
+		<div className="app-div">
 			{/* <h1>My Todos</h1>
 			<Todo text="Learn React" />
 			<Todo text="Master React" />
