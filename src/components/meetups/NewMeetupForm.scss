@@ -1,0 +1,55 @@
+@mixin button-style {
+	padding: 1.4em 2.7em;
+	border-radius: 5px;
+	background-color: rgb(73, 182, 255);
+	border-width: 0;
+	color: white;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin: 0.2em 0.4em;
+	&:hover {
+		transform: translate(0, -2px);
+		box-shadow: 1px 3px 5px rgba(54, 52, 52, 0.541);
+	}
+}
+
+.button-form {
+	@include button-style;
+}
+
+.delButton-form {
+	@include button-style;
+	background-color: red;
+}
+
+.new-meetup-form {
+	padding: 2rem;
+	min-width: 60vw;
+	flex: 1;
+}
+
+.nmf-container {
+	margin-bottom: 0.5rem;
+	label {
+		display: block;
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+	}
+	input,
+	textarea {
+		display: block;
+		font: inherit;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		padding: 0.25rem;
+		width: 100%;
+	}
+}
+
+.nmf-btn-container {
+	margin-top: 1rem;
+	text-align: right;
+}

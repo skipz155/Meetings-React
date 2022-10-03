@@ -5,3 +5,11 @@
 	display: flex;
 	gap: 2em;
 }
+
+@media all and (max-width: 700px) {
+	.list {
+		/* On small screens, we are no longer using row direction but column */
+		flex-direction: column;
+		gap: 0.5em;
+	}
+}

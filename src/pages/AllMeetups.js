@@ -1,4 +1,5 @@
 import MeetupList from "../components/meetups/MeetupList";
+import '../index.scss'
 
 const DUMMY_DATA = [
 	{
@@ -25,7 +26,7 @@ function AllMeetupsPage() {
 	return (
 		<div>
 			<h1>All Meetups Page!</h1>
-			<ul>
+			<ul className="all-meetups-ul">
 				<MeetupList meetups={DUMMY_DATA}></MeetupList>
 			</ul>
 		</div>

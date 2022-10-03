@@ -36,7 +36,7 @@ function MeetupItem(props) {
 				</div>
 				<h2 className={classes.title}>{props.title}</h2>
 				<p className={classes.description}>{props.description}</p>
-				<div>
+				<div className={classes.buttonContainer}>
 					<button className={classes.button} onClick={toFavouriteHandler}>
 						Add to favourites
 					</button>

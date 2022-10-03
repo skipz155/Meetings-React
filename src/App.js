@@ -5,16 +5,12 @@ import AllMeetupsPage from "./pages/AllMeetups";
 import FavouritesPage from "./pages/Favourites";
 import NewMeetupPage from "./pages/NewMeetup";
 import MainNavigation from "./components/layout/MainNavigation";
-import './index.scss';
+import "./index.scss";
+import Layout from "./components/layout/Layout";
 
 function App() {
 	return (
-		<div className="app-div">
-			{/* <h1>My Todos</h1>
-			<Todo text="Learn React" />
-			<Todo text="Master React" />
-			<Todo text="Explore the full React course" /> */}
-			<MainNavigation />
+		<Layout className="app-div">
 			<Switch>
 				<Route path="/" exact>
 					<AllMeetupsPage></AllMeetupsPage>
@@ -26,7 +22,7 @@ function App() {
 					<FavouritesPage></FavouritesPage>
 				</Route>
 			</Switch>
-		</div>
+		</Layout>
 	);
 }
 
