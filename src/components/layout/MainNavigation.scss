@@ -52,3 +52,11 @@ header {
 		background-color: lighten($color: rgb(25, 25, 55), $amount: 10%);
 	}
 }
+
+.badge {
+	background-color: rgb(233, 53, 53);
+	color: white;
+	border-radius: 12px;
+	padding: 0 0.8rem;
+	margin-left: 0.5rem;
+}

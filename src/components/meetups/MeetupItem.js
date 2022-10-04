@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./MeetupItem.module.scss";
+import FavouritesContext from "../../store/favourites-context"; //485 -> wyjasnione
 
 import classes from "./MeetupItem.module.scss";
 import Card from "../wrappers/Card";
@@ -7,11 +8,26 @@ import Modal from "../Modal";
 import Backdrop from "../Backdrop";
 
 function MeetupItem(props) {
+	const favouriteCtx = useContext(FavouritesContext);
+	const itemIsFavourite = favouriteCtx.itemIsFavourite(props.id);
+
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const [deleteModalIsOpen, setDeleteModalIsOpen] = useState(false);
 
 	function toFavouriteHandler() {
-		setModalIsOpen(true);
+		//setModalIsOpen(true);
+
+		if (itemIsFavourite) {
+			favouriteCtx.removeFavourite(props.id);
+		} else {
+			favouriteCtx.addFavourite({
+				id: props.id,
+				title: props.title,
+				description: props.description,
+				image: props.image,
+				address: props.address,
+			});
+		}
 	}
 
 	function deleteHandler() {
@@ -38,7 +54,7 @@ function MeetupItem(props) {
 				<p className={classes.description}>{props.description}</p>
 				<div className={classes.buttonContainer}>
 					<button className={classes.button} onClick={toFavouriteHandler}>
-						Add to favourites
+						{itemIsFavourite ? "Remove from Favs" : "Add to favourites"}
 					</button>
 					<button className={classes.delButton} onClick={deleteHandler}>
 						Delete
